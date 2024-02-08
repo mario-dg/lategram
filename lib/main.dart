@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:lategram/features/presentation/screens/credentials/login_screen.dart';
 import 'package:lategram/globals.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Lategram());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Lategram extends StatelessWidget {
+  const Lategram({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Lategram',
+      title: 'Lategram - An Instagram Clone',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: mobileBackgroundColors,
+        scaffoldBackgroundColor: mobileBackgroundColor,
       ),
-      home: const Scaffold(body: Text("Let's build Lategram!")),
+      home: const LoginScreen(),
     );
   }
 }
