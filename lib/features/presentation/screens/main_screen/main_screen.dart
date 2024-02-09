@@ -1,10 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lategram/features/presentation/screens/activity/activity_screen.dart';
-import 'package:lategram/features/presentation/screens/add_post/add_post_screen.dart';
-import 'package:lategram/features/presentation/screens/home/home_screen.dart';
-import 'package:lategram/features/presentation/screens/profile/profile_screen.dart';
-import 'package:lategram/features/presentation/screens/search/search_screen.dart';
 import 'package:lategram/globals.dart';
 
 class MainScreen extends StatefulWidget {
@@ -50,21 +45,26 @@ class _MainScreenState extends State<MainScreen> {
       bottomNavigationBar: CupertinoTabBar(
         backgroundColor: mobileBackgroundColor,
         onTap: navigationTapped,
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: primaryColor),
+            icon: Icon(Icons.home,
+                color: _currentPageIndex == 0 ? accentColor : primaryColor),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search, color: primaryColor),
+            icon: Icon(Icons.search,
+                color: _currentPageIndex == 1 ? accentColor : primaryColor),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.add_circle, color: primaryColor),
+            icon: Icon(Icons.add_circle,
+                color: _currentPageIndex == 2 ? accentColor : primaryColor),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite, color: primaryColor),
+            icon: Icon(Icons.favorite,
+                color: _currentPageIndex == 3 ? accentColor : primaryColor),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle, color: primaryColor),
+            icon: Icon(Icons.account_circle,
+                color: _currentPageIndex == 4 ? accentColor : primaryColor),
           ),
         ],
       ),
@@ -72,13 +72,7 @@ class _MainScreenState extends State<MainScreen> {
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         onPageChanged: onPageChanged,
-        children: const [
-          HomeScreen(),
-          SearchScreen(),
-          AddPostScreen(),
-          ActivityScreen(),
-          ProfileScreen(),
-        ],
+        children: mainScreenPages,
       ),
     );
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:lategram/features/presentation/screens/search/widgets/search_widget.dart';
 import 'package:lategram/features/utils/helpers.dart';
 import 'package:lategram/globals.dart';
@@ -39,16 +38,13 @@ class _SearchScreenState extends State<SearchScreen> {
                   physics: const ScrollPhysics(),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
-                    mainAxisSpacing: 4,
-                    crossAxisSpacing: 4,
+                    mainAxisSpacing: 2,
+                    crossAxisSpacing: 2,
                   ),
                   itemBuilder: (context, index) => Container(
                     width: 100,
                     height: 100,
-                    decoration: BoxDecoration(
-                      color: secondaryColor,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
+                    color: secondaryColor,
                   ),
                 ),
               ],
