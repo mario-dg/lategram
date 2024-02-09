@@ -24,6 +24,8 @@ class LoginScreen extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 "assets/lategram_icon.svg",
+                colorFilter:
+                    const ColorFilter.mode(primaryColor, BlendMode.color),
                 height: 145,
               ),
               Flexible(
