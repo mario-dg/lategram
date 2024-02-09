@@ -73,7 +73,7 @@ class _TextInputWidgetState extends State<TextInputWidget> {
                 },
                 child: widget.isPassword == true
                     ? Icon(
-                        _obscureText ? Icons.visibility_off : Icons.visibility)
+                        _obscureText ? Icons.visibility : Icons.visibility_off)
                     : null,
               )
             : null,

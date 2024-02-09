@@ -22,13 +22,13 @@ class LoginScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Flexible(
-                flex: 2,
-                child: Container(),
-              ),
               SvgPicture.asset(
                 "assets/lategram_icon.svg",
                 height: 145,
+              ),
+              Flexible(
+                flex: 1,
+                child: Container(),
               ),
               verSpace(25),
               const TextInputWidget(
@@ -51,6 +51,9 @@ class LoginScreen extends StatelessWidget {
                 flex: 2,
                 child: Container(),
               ),
+              const Divider(
+                color: secondaryColor,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -65,7 +68,7 @@ class LoginScreen extends StatelessWidget {
                     child: Container(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: const Text(
-                        "Signup!",
+                        "Signup",
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
