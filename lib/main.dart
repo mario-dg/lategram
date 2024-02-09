@@ -4,6 +4,7 @@ import 'package:lategram/features/presentation/screens/credentials/login_screen.
 import 'package:lategram/features/presentation/screens/credentials/signup_screen.dart';
 import 'package:lategram/features/presentation/screens/home/home_screen.dart';
 import 'package:lategram/features/presentation/screens/main_screen/main_screen.dart';
+import 'package:lategram/features/presentation/screens/search/search_screen.dart';
 import 'package:lategram/globals.dart';
 
 void main() {

@@ -13,9 +13,14 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: mobileBackgroundColor,
       appBar: AppBar(
         backgroundColor: mobileBackgroundColor,
-        title: SvgPicture.asset(
-          "assets/lategram_icon.svg",
-          height: 92,
+        title: Center(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 15),
+            child: SvgPicture.asset(
+              "assets/lategram_icon.svg",
+              height: 96,
+            ),
+          ),
         ),
         actions: const [
           Padding(
@@ -29,6 +34,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Post Header Bar
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -56,12 +62,14 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             verSpace(10),
+            // Post Image
             Container(
               width: double.infinity,
               height: MediaQuery.of(context).size.height * 0.3,
               color: secondaryColor,
             ),
             verSpace(10),
+            // Post Actions Buttons
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -88,6 +96,7 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             verSpace(10),
+            // Post Username and Description
             Row(
               children: [
                 const Text(
@@ -107,10 +116,12 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             verSpace(10),
+            // Comments
             const Text("View all comments",
                 style: TextStyle(
                     color: secondaryColor, fontWeight: FontWeight.w400)),
             verSpace(2),
+            // Date
             const Text("09/02/2024",
                 style: TextStyle(
                     color: secondaryColor, fontWeight: FontWeight.w400)),
