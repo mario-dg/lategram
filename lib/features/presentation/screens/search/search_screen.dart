@@ -43,8 +43,8 @@ class _SearchScreenState extends State<SearchScreen> {
                     crossAxisSpacing: 4,
                   ),
                   itemBuilder: (context, index) => Container(
-                    width: index % 7 == 0 ? 200 : 100,
-                    height: index % 7 == 0 ? 200 : 100,
+                    width: 100,
+                    height: 100,
                     decoration: BoxDecoration(
                       color: secondaryColor,
                       borderRadius: BorderRadius.circular(15),
