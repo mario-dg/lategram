@@ -13,10 +13,6 @@ class EditProfileScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: mobileBackgroundColor,
         title: const Text("Edit Profile"),
-        leading: GestureDetector(
-          onTap: () => Navigator.pop(context),
-          child: const Icon(Icons.close, size: 28),
-        ),
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 10),

@@ -3,6 +3,7 @@ import 'package:lategram/globals.dart';
 
 class TextInputWidget extends StatefulWidget {
   final TextEditingController? controller;
+  final double? fontSize = 14;
   final Key? fieldKey;
   final bool? isPassword;
   final String? hintText;
@@ -44,11 +45,11 @@ class _TextInputWidgetState extends State<TextInputWidget> {
   Widget build(BuildContext context) {
     final inputBorder = OutlineInputBorder(
       borderSide: Divider.createBorderSide(context),
-      borderRadius: BorderRadius.circular(borderRadius),
+      borderRadius: BorderRadius.circular(25),
     );
 
     return TextFormField(
-      style: const TextStyle(color: primaryColor),
+      style: TextStyle(color: primaryColor, fontSize: widget.fontSize),
       controller: widget.controller,
       keyboardType: widget.keyboardType,
       key: widget.key,
@@ -62,7 +63,7 @@ class _TextInputWidgetState extends State<TextInputWidget> {
         border: inputBorder,
         focusedBorder: inputBorder,
         enabledBorder: inputBorder,
-        contentPadding: const EdgeInsets.all(8),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
         filled: true,
         suffixIcon: widget.isPassword ?? false
             ? GestureDetector(
