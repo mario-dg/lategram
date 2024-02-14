@@ -96,6 +96,10 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             verSpace(10),
+            // Number of Likes
+            const Text("2 likes",
+                style: TextStyle(
+                    color: primaryColor, fontWeight: FontWeight.bold)),
             // Post Username and Description
             Row(
               children: [
