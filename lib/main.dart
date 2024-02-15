@@ -1,9 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:lategram/features/presentation/screens/main_screen/main_screen.dart';
 import 'package:lategram/globals.dart';
 import 'package:lategram/on_generate_rout.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const Lategram());
 }
 
