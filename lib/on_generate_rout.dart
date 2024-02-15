@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lategram/features/presentation/screens/credentials/login_screen.dart';
-import 'package:lategram/features/presentation/screens/credentials/signup_screen.dart';
+import 'package:lategram/features/presentation/screens/authentication/login_screen.dart';
+import 'package:lategram/features/presentation/screens/authentication/signup_screen.dart';
 import 'package:lategram/features/presentation/screens/page_not_found_screen.dart';
 import 'package:lategram/features/presentation/screens/post/comment/comment_screen.dart';
 import 'package:lategram/features/presentation/screens/post/update_post_screen.dart';
@@ -11,7 +11,7 @@ dynamic routeBuilder(Widget child) => MaterialPageRoute(builder: (_) => child);
 
 class OnGenerateRoute {
   static Route<dynamic>? route(RouteSettings settings) {
-    final args = settings.arguments;
+    // final args = settings.arguments;
 
     switch (settings.name) {
       case Pages.login:
