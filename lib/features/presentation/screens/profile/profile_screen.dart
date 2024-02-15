@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lategram/features/presentation/screens/profile/edit_profile_screen.dart';
 import 'package:lategram/features/utils/helpers.dart';
 import 'package:lategram/globals.dart';
 
@@ -42,10 +41,8 @@ class ProfileScreen extends StatelessWidget {
                   left: 10,
                 ),
                 child: GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const EditProfileScreen()));
-                  },
+                  onTap: () =>
+                      Navigator.of(context).pushNamed(Pages.editProfile),
                   child: const Text(
                     "Edit Profile",
                     style: TextStyle(

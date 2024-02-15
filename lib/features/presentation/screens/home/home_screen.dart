@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:lategram/features/presentation/screens/post/comment/comment_screen.dart';
-import 'package:lategram/features/utils/helpers.dart';
 import 'package:lategram/globals.dart';
 
 import '../post/widgets/post_widget.dart';

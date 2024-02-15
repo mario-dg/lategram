@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:lategram/features/presentation/screens/credentials/signup_screen.dart';
 import 'package:lategram/features/presentation/widgets/button_widget.dart';
 import 'package:lategram/features/presentation/widgets/text_input_widget.dart';
 import 'package:lategram/features/utils/helpers.dart';
@@ -24,8 +23,6 @@ class LoginScreen extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 "assets/lategram_icon.svg",
-                colorFilter:
-                    const ColorFilter.mode(primaryColor, BlendMode.color),
                 height: 145,
               ),
               Flexible(
@@ -65,8 +62,8 @@ class LoginScreen extends StatelessWidget {
                     child: const Text("Don't have an account? "),
                   ),
                   GestureDetector(
-                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const SignupScreen())),
+                    onTap: () => Navigator.of(context).pushNamedAndRemoveUntil(
+                        Pages.signup, (route) => false),
                     child: Container(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: const Text(

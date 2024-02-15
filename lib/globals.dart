@@ -22,3 +22,11 @@ const mainScreenPages = [
   ActivityScreen(),
   ProfileScreen(),
 ];
+
+class Pages {
+  static const String editProfile = "editProfile";
+  static const String updatePost = "updatePost";
+  static const String comment = "comment";
+  static const String login = "login";
+  static const String signup = "signup";
+}

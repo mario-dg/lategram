@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:lategram/features/presentation/screens/credentials/login_screen.dart';
 import 'package:lategram/features/presentation/widgets/button_widget.dart';
 import 'package:lategram/features/presentation/widgets/text_input_widget.dart';
 import 'package:lategram/features/utils/helpers.dart';
@@ -102,11 +101,8 @@ class SignupScreen extends StatelessWidget {
                     child: const Text("Already have an account? "),
                   ),
                   GestureDetector(
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const LoginScreen(),
-                      ),
-                    ),
+                    onTap: () => Navigator.of(context)
+                        .pushNamedAndRemoveUntil(Pages.login, (route) => false),
                     child: Container(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: const Text(

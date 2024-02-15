@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:lategram/features/presentation/screens/post/comment/comment_screen.dart';
-import 'package:lategram/features/presentation/screens/post/update_post_screen.dart';
 import 'package:lategram/features/utils/helpers.dart';
 import 'package:lategram/globals.dart';
 
@@ -46,13 +44,8 @@ class PostWidget extends StatelessWidget {
                   left: 10,
                 ),
                 child: GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const UpdatePostScreen(),
-                      ),
-                    );
-                  },
+                  onTap: () =>
+                      Navigator.of(context).pushNamed(Pages.updatePost),
                   child: const Text(
                     "Update Post",
                     style: TextStyle(
@@ -148,11 +141,7 @@ class PostWidget extends StatelessWidget {
                   ),
                   horSpace(10),
                   GestureDetector(
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const CommentScreen(),
-                      ),
-                    ),
+                    onTap: () => Navigator.of(context).pushNamed(Pages.comment),
                     child: const Icon(
                       FeatherIcons.messageCircle,
                       color: primaryColor,
